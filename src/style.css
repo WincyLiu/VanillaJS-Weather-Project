@@ -1,11 +1,5 @@
 .container {
-  background: linear-gradient(
-    57.4deg,
-    rgb(249, 206, 183) 4.6%,
-    rgb(234, 174, 202) 26%,
-    rgb(210, 182, 226) 49.1%,
-    rgb(173, 209, 242) 86.5%
-  );
+background: linear-gradient(135deg, rgb(255, 246, 183) 10%, rgb(234, 174, 202) 100%);
   border: 1px solid;
   border-radius: 20px;
   margin: 20px auto;

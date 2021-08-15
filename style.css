@@ -1,0 +1,83 @@
+.container {
+  background: linear-gradient(
+    57.4deg,
+    rgb(249, 206, 183) 4.6%,
+    rgb(234, 174, 202) 26%,
+    rgb(210, 182, 226) 49.1%,
+    rgb(173, 209, 242) 86.5%
+  );
+  border: 1px solid;
+  border-radius: 20px;
+  margin: 20px auto;
+  max-width: 700px;
+  padding: 30px;
+}
+
+h1,
+h2,
+ul,
+em,
+p {
+  font-family: "Roboto Mono", monospace;
+}
+
+h1 {
+  margin-top: 25px;
+}
+#date {
+  font-size: 20px;
+  font-family: monospace;
+}
+
+.temperature {
+  font-size: 40px;
+}
+
+.sun-icon {
+  font-size: 60px;
+  padding-top: 15px;
+  padding-left: 30px;
+}
+
+.units {
+  font-size: 15px;
+  position: relative;
+  bottom: 16px;
+  display: inline-block;
+}
+
+#celcius-link {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  text-underline-position: none;
+  color: rgb(105, 103, 103);
+}
+#fahrenheit-link {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  text-underline-position: none;
+  color: rgb(105, 103, 103);
+}
+
+p,
+em {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+ul {
+  padding: 0;
+}
+
+ul {
+  font-size: 16px;
+  line-height: 1;
+  list-style-type: none;
+}
+
+small {
+  display: block;
+  text-align: center;
+}

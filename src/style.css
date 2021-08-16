@@ -35,24 +35,32 @@ h1 {
 
 .units {
   font-size: 15px;
+  font-weight: 500;
   position: relative;
   bottom: 16px;
   display: inline-block;
 }
 
-#celcius-link {
+#celsius-link {
   text-decoration: none;
-  font-weight: 500;
-  font-size: 16px;
   text-underline-position: none;
-  color: rgb(105, 103, 103);
+  color: black;
+  cursor: default;
 }
+
+#celsius-link:hover {
+  color: white;
+}
+
 #fahrenheit-link {
   text-decoration: none;
-  font-weight: 500;
-  font-size: 16px;
   text-underline-position: none;
-  color: rgb(105, 103, 103);
+  color: black;
+  cursor: default;
+}
+
+#fahrenheit-link:hover {
+  color: white;
 }
 
 p,

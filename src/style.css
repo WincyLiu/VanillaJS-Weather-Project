@@ -79,6 +79,10 @@ ul {
   list-style-type: none;
 }
 
+#forecast {
+  text-align: center;
+}
+
 small {
   display: block;
   text-align: center;

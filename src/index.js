@@ -70,6 +70,12 @@ function showTemperature(response) {
 
   let temperature = document.querySelector("#temperature");
   temperature.innerHTML = Math.round(celsiusTemperature);
+  
+   let icon = document.querySelector("#icon");
+  icon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 
   let description = document.querySelector("#description");
   description.innerHTML = response.data.weather[0].main;

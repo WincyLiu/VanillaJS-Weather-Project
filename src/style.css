@@ -1,8 +1,17 @@
+body {
+  background-image: url("../cloud.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: #e5e5e5;
+  opacity: 90%;
+}
+
 .container {
 background: linear-gradient( 57.4deg, rgb(249, 206, 183) 4.6%, rgb(234, 174, 202) 26%, rgb(210, 182, 226) 49.1%, rgb(173, 209, 242) 86.5% );
   border: 1px solid;
   border-radius: 20px;
-  margin: 20px auto;
+  margin-top: 30px;
   max-width: 700px;
   padding: 30px;
 }
@@ -27,10 +36,8 @@ h1 {
   font-size: 40px;
 }
 
-.sun-icon {
-  font-size: 60px;
-  padding-top: 15px;
-  padding-left: 30px;
+#icon {
+ margin-left: 35px;
 }
 
 .units {
@@ -85,5 +92,6 @@ ul {
 
 small {
   display: block;
+  margin-top: 10px;
   text-align: center;
 }

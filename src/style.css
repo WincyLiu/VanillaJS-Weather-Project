@@ -1,8 +1,10 @@
 body {
   background-image: url("../cloud.jpeg");
   background-repeat: no-repeat;
-  background-size: cover;
   background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
   background-color: #e5e5e5;
   opacity: 90%;
 }
@@ -11,7 +13,7 @@ body {
 background: linear-gradient( 57.4deg, rgb(249, 206, 183) 4.6%, rgb(234, 174, 202) 26%, rgb(210, 182, 226) 49.1%, rgb(173, 209, 242) 86.5% );
   border: 1px solid;
   border-radius: 20px;
-  margin-top: 30px;
+  margin-top: 40px;
   max-width: 700px;
   padding: 30px;
 }

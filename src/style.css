@@ -92,6 +92,19 @@ ul {
   text-align: center;
 }
 
+.forecast-date {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.forecast-temperature-min {
+  opacity: 70%;
+}
+
+.forecast-temperatures {
+  font-size: 15px;
+}
+
 small {
   display: block;
   margin-top: 10px;

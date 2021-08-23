@@ -45,6 +45,38 @@ let dateElement = document.querySelector("#date");
 let currentTime = new Date();
 dateElement.innerHTML = formatDate(currentTime);
 
+//Forecast
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row"> `;
+  let days = ["Mon", "Tue", "Wed"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+  <div class="col-2">
+    <div class="forecast-date">${day}</div>
+    <img src="http://openweathermap.org/img/wn/50d@2x.png" alt="" width="42" />
+    <div class="forecast-temperatures">
+      <span class="forecast-temperature-max"> 18° </span>
+      <span class="forecast-temperature-min"> 12° </span>
+    </div>
+  </div>
+  `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
+function getForecast(coordinates) {
+  let apiKey = "f3a6803962b9a95d77dfdbc8dc0f3991";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
+
 //Search
 function searchCity(city) {
   let apiKey = "f3a6803962b9a95d77dfdbc8dc0f3991";
@@ -92,6 +124,8 @@ function showTemperature(response) {
   let cloud = document.querySelector("#cloudiness");
   let cloudy = response.data.clouds.all;
   cloud.innerHTML = `Cloudiness: ${cloudy}%`;
+  
+   getForecast(response.data.coord);
 }
 
 //Geolocation
@@ -137,32 +171,3 @@ function changeToCelsius(event) {
 
 let celsius = document.querySelector("#celsius-link");
 celsius.addEventListener("click", changeToCelsius);
-
-//Forecast
-
-function displayForecast() {
-  let forecastElement = document.querySelector("#forecast");
-
-  let forecastHTML = `<div class="row"> `;
-  let days = ["Mon", "Tue", "Wed"];
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `
-  <div class="col-2">
-    <div class="forecast-date">${day}</div>
-    <img src="http://openweathermap.org/img/wn/50d@2x.png" alt="" width="42" />
-    <div class="forecast-temperatures">
-      <span class="forecast-temperature-max"> 18° </span>
-      <span class="forecast-temperature-min"> 12° </span>
-    </div>
-  </div>
-  `;
-  });
-
-  forecastHTML = forecastHTML + `</div>`;
-  forecastElement.innerHTML = forecastHTML;
-}
-
-displayForecast();
-

@@ -1,4 +1,4 @@
-//Date
+//Current Date
 function formatDate() {
   let now = new Date();
   let date = now.getDate();
@@ -46,16 +46,34 @@ let currentTime = new Date();
 dateElement.innerHTML = formatDate(currentTime);
 
 //Forecast
-function displayForecast() {
+function formatDay(timestamp) {
+  let futureDate = new Date(timestamp * 1000);
+  let day = futureDate.getDay();
+  let futureDays = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+
+  return futureDays[day];
+}
+
+function displayForecast(response) {
+  let forecast = response.data.daily;
+
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class="row"> `;
-  let days = ["Mon", "Tue", "Wed"];
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `
-  <div class="col-2">
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 6 && index > 0) {
+      forecastHTML =
+        forecastHTML +
+        `
+  <div class="col-sm">
     <div class="forecast-date">${day}</div>
     <img src="http://openweathermap.org/img/wn/50d@2x.png" alt="" width="42" />
     <div class="forecast-temperatures">
@@ -64,6 +82,7 @@ function displayForecast() {
     </div>
   </div>
   `;
+    }
   });
 
   forecastHTML = forecastHTML + `</div>`;

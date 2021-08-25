@@ -113,6 +113,8 @@ function submitCity(event) {
   event.preventDefault();
   let city = document.querySelector("#search-input").value;
   searchCity(city);
+  let searchInput = document.querySelector("#search-input");
+  searchInput.value = "";
 }
 searchCity("London");
 

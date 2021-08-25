@@ -123,7 +123,7 @@ function showTemperature(response) {
  let currentCity = document.querySelector("#city");
   let cityName = response.data.name;
   let country = response.data.sys.country;
-  currentCity.innerHTML = `${cityName}, ${country}`;
+  currentCity.innerHTML = `${cityName},${country}`;
 
   celsiusTemperature = response.data.main.temp;
 

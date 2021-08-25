@@ -120,8 +120,10 @@ let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", submitCity);
 
 function showTemperature(response) {
-  let city = document.querySelector("#city");
-  city.innerHTML = response.data.name;
+ let currentCity = document.querySelector("#city");
+  let cityName = response.data.name;
+  let country = response.data.sys.country;
+  currentCity.innerHTML = `${cityName}, ${country}`;
 
   celsiusTemperature = response.data.main.temp;
 

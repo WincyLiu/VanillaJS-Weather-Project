@@ -57,21 +57,6 @@ h1 {
   cursor: default;
 }
 
-#celsius-link:hover {
-  color: white;
-}
-
-#fahrenheit-link {
-  text-decoration: none;
-  text-underline-position: none;
-  color: black;
-  cursor: default;
-}
-
-#fahrenheit-link:hover {
-  color: white;
-}
-
 p,
 em {
   font-weight: bold;

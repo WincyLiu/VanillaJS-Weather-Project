@@ -176,27 +176,3 @@ function findLocation(event) {
 
 let geolocationButton = document.querySelector("#geolocation");
 geolocationButton.addEventListener("click", findLocation);
-
-//Units
-function changeToFahrenheit(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  let farenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
-  temperatureElement.innerHTML = Math.round(farenheitTemperature);
-}
-let celsiusTemperature = null;
-
-let form = document.querySelector("#search-form");
-form.addEventListener("submit", submitCity);
-
-let fahrenheit = document.querySelector("#fahrenheit-link");
-fahrenheit.addEventListener("click", changeToFahrenheit);
-
-function changeToCelsius(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = Math.round(celsiusTemperature);
-}
-
-let celsius = document.querySelector("#celsius-link");
-celsius.addEventListener("click", changeToCelsius);
